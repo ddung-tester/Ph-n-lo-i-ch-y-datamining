@@ -2,6 +2,9 @@
 feature_cache.py - Trích xuất và lưu trữ cache đặc trưng (HOG, Color Histogram, Combined)
 cho DATASET THẬT CHÍNH THỨC (Forest Fire & Non Fire Dataset) với tối ưu Multiprocessing.
 
+Nguồn Dataset (Kaggle):
+    https://www.kaggle.com/datasets/amerzishminha/forest-fire-and-non-fire-dataset
+
 Cấu trúc lưu trữ trong data/processed/:
 data/processed/
 ├── train/

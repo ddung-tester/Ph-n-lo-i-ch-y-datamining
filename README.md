@@ -14,7 +14,7 @@
 | STT | Họ và tên | Mã sinh viên | Vai trò đảm nhiệm | Chi tiết công việc thực hiện |
 |:---:|---|:---:|---|---|
 | 1 | **Trần Đình Dũng** | **B25CHHT089** | Trưởng nhóm / Technical Lead & Model Engineering | • Định hướng phương pháp luận, thiết kế kiến trúc hệ thống & pipeline dữ liệu.<br>• Lập trình module trích xuất đặc trưng HOG & Color Histogram và hệ thống Feature Cache (`.npy`).<br>• Xây dựng, huấn luyện & tối ưu hóa 4 mô hình: Logistic Regression, KNN, SVM, Random Forest.<br>• Phụ trách đánh giá chuyên sâu: 5-Fold Cross-Validation, kiểm định McNemar, PCA & ROC-AUC.<br>• Quản lý và phát triển toàn bộ bộ mã nguồn trong thư mục `src/`. |
-| 2 | **Phạm Minh Hiếu** | B25CHHT095 | Data Engineering & Error Analysis | • Thu thập, tiền xử lý, kiểm tra chất lượng & thống kê tập dữ liệu ảnh gốc (`data/raw`).<br>• Phân tích chi tiết danh sách các mẫu bị phân loại sai (False Positives & False Negatives).<br>• Trực quan hóa dữ liệu, vẽ biểu đồ Confusion Matrix và so sánh các bộ đặc trưng.<br>• Tham gia đóng góp và hoàn thiện tài liệu báo cáo thực nghiệm đề tài. |
+| 2 | **Phạm Minh Hiếu** | B25CHHT095 | Data Engineering & Error Analysis | • Tiếp nhận dữ liệu công khai từ Kaggle, kiểm tra chất lượng, tổ chức cấu trúc train/test & tiền xử lý dữ liệu ảnh gốc (`data/raw`).<br>• Phân tích chi tiết danh sách các mẫu bị phân loại sai (False Positives & False Negatives).<br>• Trực quan hóa dữ liệu, vẽ biểu đồ Confusion Matrix và so sánh các bộ đặc trưng.<br>• Tham gia đóng góp và hoàn thiện tài liệu báo cáo thực nghiệm đề tài. |
 | 3 | **Nguyễn Quốc Việt** | B25CHHT121 | Model Validation & Documentation | • Phụ trách kiểm thử độc lập, chạy lại pipeline thực nghiệm trên môi trường local.<br>• Thống kê, tổng hợp các bảng chỉ số hiệu năng (Accuracy, Precision, Recall, F1, AUC).<br>• Biên soạn tài liệu kỹ thuật, hướng dẫn cài đặt, cấu hình môi trường và tái hiện kết quả.<br>• Tổng hợp và chuẩn bị tài liệu, slide báo cáo trình bày đề tài. |
 
 ---
@@ -27,17 +27,24 @@ Ngoài việc so sánh thuật toán, đề tài còn phân tích ảnh hưởng
 
 ---
 
-## Tập dữ liệu
+## Dataset (Tập dữ liệu)
 
-Dữ liệu được chia sẵn thành hai tập train và test, không dùng `train_test_split` trong quá trình thực nghiệm.
+Dữ liệu gốc được nhóm sử dụng từ tập dữ liệu công khai trên Kaggle:
 
-| | Tổng | Fire | Non-fire |
+- **Nguồn dữ liệu gốc:** [Forest Fire and Non Fire Dataset (Kaggle)](https://www.kaggle.com/datasets/amerzishminha/forest-fire-and-non-fire-dataset)
+
+> **Lưu ý về lưu trữ & nộp bài:**  
+> Do dung lượng dữ liệu gốc lớn, repository và file nộp không bao gồm ảnh gốc. Vui lòng tải dữ liệu từ liên kết trên và đặt vào thư mục `data/raw/` theo cấu trúc hướng dẫn trong `DATASET_LINK.txt`.
+
+Quy mô dữ liệu sau khi nhóm tổ chức và phân chia cố định:
+
+| Tập dữ liệu | Tổng số ảnh | Fire (Cháy) | Non-fire (Không cháy) |
 |---|---|---|---|
 | **Train** | 15.609 | 7.804 | 7.805 |
 | **Test** | 6.122 | 2.665 | 3.457 |
 | **Tổng cộng** | **21.731** | **10.469** | **11.262** |
 
-Tập train và test đều được trích xuất đặc trưng một lần, lưu cache `.npy` để tái sử dụng, tránh tính lại trong mỗi lần thực nghiệm.
+Việc phân chia tập TRAIN/TEST, tiền xử lý và trích xuất đặc trưng (HOG + Color Histogram) được thực hiện theo mã nguồn và hướng dẫn trong `README.md`.
 
 ---
 
@@ -108,7 +115,7 @@ Với p = 0,6838 > α = 0,05, **không có sự khác biệt có ý nghĩa thố
 phan-loai-chay-datamining/
 │
 ├── data/
-│   ├── raw/
+│   ├── raw/                ← Ảnh gốc (Tải từ Kaggle theo DATASET_LINK.txt)
 │   │   ├── train/          ← Ảnh gốc tập train (fire/ + non_fire/)
 │   │   └── test/           ← Ảnh gốc tập test  (fire/ + non_fire/)
 │   └── processed/
@@ -141,9 +148,34 @@ phan-loai-chay-datamining/
 │   └── advanced_analysis_official.py   ← ROC-AUC + PCA + McNemar Test
 │
 ├── requirements.txt
-├── CHANGELOG.md
+├── DATASET_LINK.txt                    ← Link & hướng dẫn tải dữ liệu Kaggle
+├── GITHUB_LINK.txt                     ← Link GitHub repository của dự án
 └── README.md
 ```
+
+---
+
+## Quy chuẩn nộp bài (File ZIP)
+
+File nộp bài chính thức của nhóm (`Nhom_Dung_Hieu_Viet_DataMining.zip`) bao gồm các thành phần sau:
+
+```text
+Nhom_Dung_Hieu_Viet_DataMining.zip
+├── src/
+├── reports/
+│   ├── results/
+│   └── figures/
+├── requirements.txt
+├── README.md
+├── DATASET_LINK.txt
+└── GITHUB_LINK.txt
+```
+
+**Các mục KHÔNG bao gồm trong file nộp (để tối ưu dung lượng):**
+- `data/raw/`: Nguyên nhân chính khiến dung lượng vượt 10GB (ảnh gốc tải về trực tiếp từ Kaggle theo `DATASET_LINK.txt`).
+- File cache đặc trưng `.npy`.
+- Các file mô hình `.pkl` dung lượng lớn.
+- Thư mục môi trường ảo `.venv/`, `.git/`, `__pycache__/`.
 
 ---
 
@@ -182,7 +214,7 @@ python -m src.final_evaluation_official
 python -m src.advanced_analysis_official
 ```
 
-> **Lưu ý:** Bước 1 cần có ảnh gốc trong `data/raw/train/` và `data/raw/test/`. Bước 2–6 chỉ cần feature cache đã có, không cần ảnh gốc.
+> **Lưu ý:** Bước 1 cần có ảnh gốc trong `data/raw/train/` và `data/raw/test/` (tải về từ [Kaggle](https://www.kaggle.com/datasets/amerzishminha/forest-fire-and-non-fire-dataset)). Các Bước 2–6 có thể chạy trực tiếp bằng feature cache `.npy` trong `data/processed/` mà không cần ảnh gốc.
 
 ---
 

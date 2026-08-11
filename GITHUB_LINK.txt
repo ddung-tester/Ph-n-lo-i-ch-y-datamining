@@ -1,0 +1,7 @@
+LINK REPOSITORY GITHUB
+
+Đề tài: Phân loại hình ảnh cháy dựa trên đặc trưng HOG và Color Histogram
+Môn học: Khai phá dữ liệu (Data Mining)
+
+Link repository GitHub:
+https://github.com/ddung-tester/Ph-n-lo-i-ch-y-datamining

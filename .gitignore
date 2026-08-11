@@ -69,3 +69,12 @@ models/official/random_forest_combined.pkl
 # ============================================================
 reports/figures/svm_error_examples_OFFICIAL.png
 reports/figures/random_forest_error_examples_OFFICIAL.png
+
+# ============================================================
+# ARCHIVES — Ignore compressed datasets/archives (>100MB)
+# ============================================================
+*.rar
+*.zip
+*.tar.gz
+*.7z
+

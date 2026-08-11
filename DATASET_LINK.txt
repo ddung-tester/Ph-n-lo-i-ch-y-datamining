@@ -1,0 +1,24 @@
+BỘ DỮ LIỆU GỐC
+
+Nguồn dữ liệu:
+Forest Fire and Non Fire Dataset – Kaggle
+
+Link tải:
+https://www.kaggle.com/datasets/amerzishminha/forest-fire-and-non-fire-dataset
+
+Hướng dẫn:
+1. Tải và giải nén bộ dữ liệu từ Kaggle.
+2. Tổ chức dữ liệu theo cấu trúc:
+
+data/raw/train/fire/
+data/raw/train/non_fire/
+data/raw/test/fire/
+data/raw/test/non_fire/
+
+3. Việc phân chia tập TRAIN/TEST, tiền xử lý và trích xuất đặc trưng
+được thực hiện theo mã nguồn và hướng dẫn trong README.md.
+
+Quy mô dữ liệu sau khi nhóm tổ chức:
+- Train: 15.609 ảnh
+- Test: 6.122 ảnh
+- Tổng cộng: 21.731 ảnh

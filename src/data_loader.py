@@ -1,6 +1,9 @@
 """
 data_loader.py - Đọc dữ liệu ảnh từ thư mục dataset.
 
+Nguồn Dataset (Kaggle):
+    https://www.kaggle.com/datasets/amerzishminha/forest-fire-and-non-fire-dataset
+
 Cấu trúc thư mục mong đợi:
     data/raw/train/
     ├── fire/           (ảnh cháy - tập train)
