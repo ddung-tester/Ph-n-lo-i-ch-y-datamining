@@ -1,0 +1,5 @@
+model,accuracy,precision_fire,recall_fire,f1_fire,specificity,cv_accuracy_mean,cv_accuracy_std,cv_recall_mean,cv_recall_std,cv_f1_mean,cv_f1_std,train_time,prediction_time
+Logistic Regression,0.9446,0.9349,0.9381,0.9365,0.9497,0.945,0.0045,0.9421,0.0063,0.9449,0.0046,7.4766,0.2991
+K-Nearest Neighbors,0.8829,0.9096,0.8116,0.8578,0.9378,0.8809,0.0052,0.8118,0.0087,0.872,0.0059,1.5273,17.861
+SVM,0.9664,0.9645,0.958,0.9612,0.9728,0.9625,0.0053,0.9514,0.006,0.9621,0.0054,467.1496,275.6251
+Random Forest,0.9652,0.9612,0.9587,0.96,0.9702,0.9621,0.0037,0.9589,0.0053,0.962,0.0037,50.3677,0.268

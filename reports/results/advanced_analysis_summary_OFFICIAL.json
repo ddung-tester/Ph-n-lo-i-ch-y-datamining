@@ -1,0 +1,47 @@
+{
+  "roc_auc_scores": [
+    {
+      "model": "Logistic Regression",
+      "roc_auc": 0.975,
+      "score_method": "predict_proba",
+      "dataset_status": "REAL_DATASET_OFFICIAL"
+    },
+    {
+      "model": "K-Nearest Neighbors",
+      "roc_auc": 0.949,
+      "score_method": "predict_proba",
+      "dataset_status": "REAL_DATASET_OFFICIAL"
+    },
+    {
+      "model": "SVM",
+      "roc_auc": 0.9929,
+      "score_method": "decision_function",
+      "dataset_status": "REAL_DATASET_OFFICIAL"
+    },
+    {
+      "model": "Random Forest",
+      "roc_auc": 0.9924,
+      "score_method": "predict_proba",
+      "dataset_status": "REAL_DATASET_OFFICIAL"
+    }
+  ],
+  "pca_summary": {
+    "samples_used": 15609,
+    "original_dimensions": 5860,
+    "pc1_explained_variance": 0.041489,
+    "pc2_explained_variance": 0.01933,
+    "total_explained_variance": 0.060819
+  },
+  "mcnemar_test": {
+    "both_correct": 5804,
+    "svm_correct_rf_wrong": 112,
+    "svm_wrong_rf_correct": 105,
+    "both_wrong": 101,
+    "statistic": 0.1659,
+    "p_value": 0.6838,
+    "alpha": 0.05,
+    "significant": false,
+    "conclusion": "Chua du bang chung thong ke de khang dinh su khac biet giua SVM va Random Forest tren tap TEST (p = 0.6838 >= 0.05)."
+  },
+  "timestamp": "2026-08-10 21:58:01"
+}

@@ -1,0 +1,5 @@
+model,roc_auc,score_method,dataset_status
+Logistic Regression,0.975,predict_proba,REAL_DATASET_OFFICIAL
+K-Nearest Neighbors,0.949,predict_proba,REAL_DATASET_OFFICIAL
+SVM,0.9929,decision_function,REAL_DATASET_OFFICIAL
+Random Forest,0.9924,predict_proba,REAL_DATASET_OFFICIAL

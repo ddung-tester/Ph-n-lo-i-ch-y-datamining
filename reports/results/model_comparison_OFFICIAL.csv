@@ -1,0 +1,5 @@
+model,feature_set,num_features,accuracy,precision_fire,recall_fire,f1_fire,specificity,tp,tn,fp,fn,train_time,prediction_time,dataset_status
+Logistic Regression,Combined (HOG + Color),5860,0.9446,0.9349,0.9381,0.9365,0.9497,2500,3283,174,165,7.4766,0.2991,REAL_DATASET_OFFICIAL
+K-Nearest Neighbors,Combined (HOG + Color),5860,0.8829,0.9096,0.8116,0.8578,0.9378,2163,3242,215,502,1.5273,17.861,REAL_DATASET_OFFICIAL
+SVM,Combined (HOG + Color),5860,0.9664,0.9645,0.958,0.9612,0.9728,2553,3363,94,112,467.1496,275.6251,REAL_DATASET_OFFICIAL
+Random Forest,Combined (HOG + Color),5860,0.9652,0.9612,0.9587,0.96,0.9702,2555,3354,103,110,50.3677,0.268,REAL_DATASET_OFFICIAL

@@ -1,0 +1,71 @@
+# ============================================================
+# Byte-compiled / optimized
+# ============================================================
+__pycache__/
+*.py[cod]
+*$py.class
+
+# ============================================================
+# Virtual environment
+# ============================================================
+.venv/
+venv/
+env/
+
+# ============================================================
+# IDE
+# ============================================================
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ============================================================
+# OS
+# ============================================================
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ============================================================
+# Jupyter
+# ============================================================
+.ipynb_checkpoints/
+
+# ============================================================
+# DATA RAW — Quá nặng, không push (21.731 ảnh gốc)
+# Ignore toàn bộ nội dung trong data/raw/ (bao gồm cả "non fire" và "non_fire")
+# Chỉ giữ .gitkeep để duy trì cấu trúc thư mục
+# ============================================================
+data/raw/train/fire/*
+data/raw/train/non_fire/*
+data/raw/train/non fire/*
+data/raw/test/fire/*
+data/raw/test/non_fire/*
+data/raw/test/non fire/*
+
+# ============================================================
+# FEATURE CACHE — File .npy rất nặng (~hàng trăm MB)
+# Sinh lại bằng: python -m src.feature_cache
+# ============================================================
+data/processed/*.npy
+data/processed/train/*.npy
+data/processed/test/*.npy
+
+# ============================================================
+# MODELS — Ignore model nặng (>1MB)
+# logistic_regression_combined.pkl (~184KB) được giữ lại
+# Sinh lại model nặng bằng: python -m src.train_compare
+# ============================================================
+models/svm_fire_detector.pkl
+models/scaler.pkl
+models/official/svm_combined.pkl
+models/official/knn_combined.pkl
+models/official/random_forest_combined.pkl
+
+# ============================================================
+# REPORTS — Ignore ảnh error_examples lớn (1-2MB)
+# Các biểu đồ nhỏ (<200KB) và ảnh FP/FN nhỏ được push
+# ============================================================
+reports/figures/svm_error_examples_OFFICIAL.png
+reports/figures/random_forest_error_examples_OFFICIAL.png

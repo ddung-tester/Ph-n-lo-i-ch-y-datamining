@@ -1,0 +1,2 @@
+both_correct,svm_correct_rf_wrong,svm_wrong_rf_correct,both_wrong,statistic,p_value,alpha,significant,conclusion
+5804,112,105,101,0.1659,0.6838,0.05,False,Chua du bang chung thong ke de khang dinh su khac biet giua SVM va Random Forest tren tap TEST (p = 0.6838 >= 0.05).
